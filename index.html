@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amar Karic | .NET Backend & Security Developer</title>
+  <meta name="description" content="Amar Karic: junior software developer in Frankfurt am Main. C#/.NET backend, secure authentication, intrusion detection and DevSecOps tooling.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta property="og:title" content="Amar Karic | .NET Backend & Security Developer">
+  <meta property="og:description" content="Junior software developer in Frankfurt. C#/.NET backend with a security focus.">
+  <meta property="og:image" content="assets/logsentinel.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main"><span lang="en">Skip to content</span><span lang="de">Zum Inhalt springen</span></a>
+
+  <header class="nav">
+    <a class="logo" href="#top" aria-label="Amar Karic">AK<span>.</span></a>
+    <nav aria-label="Main">
+      <a href="#projects"><span lang="en">Projects</span><span lang="de">Projekte</span></a>
+      <a href="#experience"><span lang="en">Experience</span><span lang="de">Erfahrung</span></a>
+      <a href="#skills"><span lang="en">Skills</span><span lang="de">Skills</span></a>
+      <a href="#contact"><span lang="en">Contact</span><span lang="de">Kontakt</span></a>
+    </nav>
+    <div class="nav-tools">
+      <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Sprache wechseln / switch language">
+        <span class="opt" data-l="de">DE</span><span class="sep">/</span><span class="opt" data-l="en">EN</span>
+      </button>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <p class="eyebrow"><span class="pulse" aria-hidden="true"></span>
+        <span lang="en">Open to junior roles · Frankfurt am Main or remote</span>
+        <span lang="de">Offen für Junior-Positionen · Frankfurt am Main oder remote</span>
+      </p>
+      <h1>Amar Karic</h1>
+      <p class="role">
+        <span lang="en">Software Developer: <strong>.NET Backend</strong> &amp; <strong>Application Security</strong></span>
+        <span lang="de">Softwareentwickler: <strong>.NET Backend</strong> &amp; <strong>Application Security</strong></span>
+      </p>
+      <p class="lead">
+        <span lang="en">I build backend systems in C# and ASP.NET Core, and I look at them the way an attacker would.
+          Clean, tested code with security built in from the first line.</span>
+        <span lang="de">Ich entwickle Backend-Systeme mit C# und ASP.NET Core und betrachte sie mit den Augen eines Angreifers:
+          sauberer, getesteter Code, bei dem Sicherheit von Anfang an mitgedacht wird.</span>
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#projects"><span lang="en">See my projects</span><span lang="de">Zu meinen Projekten</span></a>
+        <a class="btn" href="#contact"><span lang="en">Get in touch</span><span lang="de">Kontakt aufnehmen</span></a>
+        <a class="btn ghost" href="https://github.com/karicamar" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+      <ul class="facts">
+        <li><strong>140+</strong><span lang="en">automated tests across my projects</span><span lang="de">automatisierte Tests in meinen Projekten</span></li>
+        <li><strong>B2</strong><span lang="en">German, improving daily in Frankfurt</span><span lang="de">Deutsch, täglich besser in Frankfurt</span></li>
+        <li><strong>C# / .NET</strong><span lang="en">professional backend experience</span><span lang="de">Berufserfahrung im Backend</span></li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 class="section-title"><span lang="en">Projects</span><span lang="de">Projekte</span></h2>
+      <p class="section-intro">
+        <span lang="en">Three projects that show how I work: an authentication service, a tool that detects attacks in its logs,
+          and a scanner that checks a site's security configuration. Each one is tested, documented and runs in CI.</span>
+        <span lang="de">Drei Projekte, die zeigen, wie ich arbeite: ein Authentifizierungs-Service, ein Tool, das Angriffe in dessen Logs
+          erkennt, und ein Scanner für die Sicherheitskonfiguration von Webseiten. Alle getestet, dokumentiert und mit CI.</span>
+      </p>
+
+      <article class="project featured">
+        <div class="project-visual code-visual" aria-hidden="true">
+          <div class="term-bar"><i></i><i></i><i></i><span>SecureAuth.Tests</span></div>
+<pre><span class="ok">✓</span> Reusing_a_rotated_refresh_token_revokes_the_whole_session_family
+<span class="ok">✓</span> Unsigned_alg_none_token_is_rejected
+<span class="ok">✓</span> Token_with_tampered_role_claim_is_rejected
+<span class="ok">✓</span> Totp_code_cannot_be_replayed
+<span class="ok">✓</span> Mfa_token_cannot_be_used_as_access_token
+<span class="ok">✓</span> Unknown_user_and_wrong_password_return_identical_responses
+<span class="ok">✓</span> Changing_password_immediately_invalidates_existing_access_tokens
+<span class="ok">✓</span> Auth_endpoints_are_rate_limited_per_client
+<span class="dim">Passed!  Failed: 0, Passed: 42, Total: 42</span></pre>
+        </div>
+        <div class="project-body">
+          <p class="project-kicker">ASP.NET Core 10 · EF Core · JWT · xUnit · Docker</p>
+          <h3>SecureAuth API</h3>
+          <p>
+            <span lang="en">An authentication service built the way security audits expect: short-lived JWTs, refresh-token rotation
+              with <strong>theft detection</strong>, TOTP two-factor login, lockout, rate limiting and a complete audit log.
+              Every protection has a test that attacks it.</span>
+            <span lang="de">Ein Authentifizierungs-Service, wie ihn Sicherheitsaudits erwarten: kurzlebige JWTs, Refresh-Token-Rotation
+              mit <strong>Diebstahlerkennung</strong>, Zwei-Faktor-Login (TOTP), Kontosperrung, Rate Limiting und lückenloses Audit-Log.
+              Jede Schutzmaßnahme hat einen Test, der sie angreift.</span>
+          </p>
+          <ul class="highlights">
+            <li><span lang="en">Refresh tokens stored only as SHA-256 hashes. Reusing an old token revokes the whole session</span><span lang="de">Refresh-Tokens nur als SHA-256-Hash gespeichert. Wiederverwendung sperrt die gesamte Session</span></li>
+            <li><span lang="en">No user enumeration: same response and timing for unknown users</span><span lang="de">Keine User-Enumeration: gleiche Antwort und Laufzeit für unbekannte Nutzer</span></li>
+            <li><span lang="en">CI with CodeQL, vulnerable-dependency scan and warnings-as-errors</span><span lang="de">CI mit CodeQL, Abhängigkeits-Scan und Warnings-as-Errors</span></li>
+          </ul>
+          <a class="link" href="https://github.com/karicamar/secure-auth-api" rel="noopener noreferrer"><span lang="en">Code &amp; docs</span><span lang="de">Code &amp; Doku</span> ↗</a>
+        </div>
+      </article>
+
+      <article class="project featured reverse">
+        <div class="project-visual"><img src="assets/logsentinel.png" alt="LogSentinel dashboard showing critical alerts, an activity timeline and MITRE ATT&amp;CK techniques" loading="lazy" width="1400" height="1100"></div>
+        <div class="project-body">
+          <p class="project-kicker">.NET 10 · Minimal API · Vanilla JS · MITRE ATT&amp;CK</p>
+          <h3>LogSentinel</h3>
+          <p>
+            <span lang="en">A lightweight SIEM. It reads SSH, nginx/Apache and application logs and detects brute force, password spraying,
+              SQL injection, scanners and stolen session tokens. Every alert is mapped to MITRE ATT&amp;CK and comes with evidence.</span>
+            <span lang="de">Ein schlankes SIEM: liest SSH-, nginx/Apache- und Anwendungslogs und erkennt Brute Force, Password Spraying,
+              SQL-Injection, Scanner und gestohlene Session-Tokens. Jeder Alarm ist MITRE ATT&amp;CK zugeordnet und mit Belegen versehen.</span>
+          </p>
+          <ul class="highlights">
+            <li><span lang="en">Escalates to <em>Critical</em> when an attack seems to have worked (login after brute force, SQLi answered with 200)</span><span lang="de">Eskaliert auf <em>Critical</em>, wenn ein Angriff wohl erfolgreich war (Login nach Brute Force, SQLi mit HTTP 200)</span></li>
+            <li><span lang="en">Dashboard is hardened against stored XSS from log content (strict CSP, no innerHTML)</span><span lang="de">Dashboard gehärtet gegen Stored XSS aus Logdaten (strikte CSP, kein innerHTML)</span></li>
+            <li><span lang="en">CLI with exit codes for cron/CI, Markdown incident reports</span><span lang="de">CLI mit Exit-Codes für Cron/CI, Incident-Reports in Markdown</span></li>
+          </ul>
+          <a class="link" href="https://github.com/karicamar/log-sentinel" rel="noopener noreferrer"><span lang="en">Code &amp; docs</span><span lang="de">Code &amp; Doku</span> ↗</a>
+        </div>
+      </article>
+
+      <article class="project featured">
+        <div class="project-visual"><img src="assets/headerguard.png" alt="HeaderGuard HTML report grading example.com with an E and listing missing security headers" loading="lazy" width="1000" height="620"></div>
+        <div class="project-body">
+          <p class="project-kicker">.NET Tool · TLS · CSP · SARIF · GitHub Actions</p>
+          <h3>HeaderGuard</h3>
+          <p>
+            <span lang="en">A DevSecOps scanner that grades a website's security configuration from A+ to F: HTTPS and certificates,
+              HSTS, Content-Security-Policy, cookies, CORS and exposed <code>.git</code>/<code>.env</code> files. It fails CI builds below a
+              minimum score and reports to GitHub Code Scanning via SARIF.</span>
+            <span lang="de">Ein DevSecOps-Scanner, der die Sicherheitskonfiguration einer Webseite von A+ bis F bewertet: HTTPS und Zertifikat,
+              HSTS, Content-Security-Policy, Cookies, CORS und offene <code>.git</code>/<code>.env</code>-Dateien. Bricht CI-Builds unter
+              einer Mindestnote ab und meldet an GitHub Code Scanning (SARIF).</span>
+          </p>
+          <ul class="highlights">
+            <li><span lang="en">Low false positives: follows real browser behaviour (CSP nonces, soft-404 detection)</span><span lang="de">Wenige Fehlalarme: folgt echtem Browser-Verhalten (CSP-Nonces, Soft-404-Erkennung)</span></li>
+            <li><span lang="en">Never prints secrets: found keys are masked in every report</span><span lang="de">Gibt nie Secrets aus: gefundene Schlüssel werden maskiert</span></li>
+            <li><span lang="en">Scans this website every week in CI</span><span lang="de">Scannt diese Webseite wöchentlich per CI</span></li>
+          </ul>
+          <a class="link" href="https://github.com/karicamar/headerguard" rel="noopener noreferrer"><span lang="en">Code &amp; docs</span><span lang="de">Code &amp; Doku</span> ↗</a>
+        </div>
+      </article>
+
+      <div class="project-grid">
+        <article class="project small">
+          <p class="project-kicker">C# · .NET · EF Core · Flutter · Docker</p>
+          <h3>HajUsput</h3>
+          <p>
+            <span lang="en">Carpooling platform with an ASP.NET Core backend and a Flutter cross-platform app. Built end to end, from database to mobile UI.</span>
+            <span lang="de">Mitfahrplattform mit ASP.NET-Core-Backend und Flutter-App für mehrere Plattformen, komplett selbst entwickelt, von der Datenbank bis zur mobilen UI.</span>
+          </p>
+          <a class="link" href="https://github.com/karicamar/HajUsput" rel="noopener noreferrer">GitHub ↗</a>
+        </article>
+        <article class="project small">
+          <p class="project-kicker">.NET · Claude API · Automation</p>
+          <h3>Job Hunter Agent</h3>
+          <p>
+            <span lang="en">An AI agent that collects IT job ads from many German job boards, ranks them against my profile and drafts tailored cover letters.</span>
+            <span lang="de">Ein KI-Agent, der IT-Stellen aus vielen deutschen Jobbörsen sammelt, sie mit meinem Profil abgleicht und passende Anschreiben entwirft.</span>
+          </p>
+          <span class="badge"><span lang="en">In progress</span><span lang="de">In Arbeit</span></span>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h2 class="section-title"><span lang="en">Experience</span><span lang="de">Berufserfahrung</span></h2>
+      <ol class="timeline">
+        <li>
+          <span class="when"><span lang="en">Dec 2025 – today</span><span lang="de">Dez. 2025 – heute</span></span>
+          <h3>Servicekraft · Sonnenhof am Park, Frankfurt</h3>
+          <p>
+            <span lang="en">Working in a German-speaking team every day while I move back into software development. My German, my teamwork and how I deal with guests under pressure all improve here.</span>
+            <span lang="de">Tägliche Arbeit in einem deutschsprachigen Team, während ich in die Softwareentwicklung zurückkehre. Hier werden mein Deutsch, meine Teamarbeit und der Umgang mit Gästen unter Druck jeden Tag besser.</span>
+          </p>
+        </li>
+        <li>
+          <span class="when"><span lang="en">Jul 2024 – Dec 2024</span><span lang="de">Juli 2024 – Dez. 2024</span></span>
+          <h3>Backend Developer · Really Simple Solution, Mostar</h3>
+          <p>
+            <span lang="en">Developed and maintained backend features in C#/.NET for client projects such as the invoicing platform <em>fakture.ba</em>:
+              REST APIs, Entity Framework Core, SQL, debugging and testing in an Agile/Scrum team using Git.</span>
+            <span lang="de">Entwicklung und Wartung von Backend-Funktionen in C#/.NET für Kundenprojekte wie die Rechnungsplattform <em>fakture.ba</em>:
+              REST-APIs, Entity Framework Core, SQL, Debugging und Tests im agilen Scrum-Team mit Git.</span>
+          </p>
+        </li>
+        <li>
+          <span class="when">2020 – 2024</span>
+          <h3><span lang="en">Sales Representative</span><span lang="de">Vertriebsmitarbeiter</span> · Bosnia and Herzegovina</h3>
+          <p>
+            <span lang="en">Four years of managing customer relationships, negotiation and reporting. I understand what the business needs, which helps me build software people actually use.</span>
+            <span lang="de">Vier Jahre Kundenbetreuung, Verhandlung und Reporting. Ich verstehe, was das Geschäft braucht, und baue deshalb Software, die Menschen wirklich nutzen.</span>
+          </p>
+        </li>
+        <li>
+          <span class="when"><span lang="en">expected Sep 2026</span><span lang="de">voraussichtlich Sep. 2026</span></span>
+          <h3><span lang="en">Bachelor in Software Development</span><span lang="de">Bachelor Softwareentwicklung</span></h3>
+          <p><span lang="en">Faculty of Information Technology, University Džemal Bijedić, Mostar</span><span lang="de">Fakultät für Informationstechnologie, Universität Džemal Bijedić, Mostar</span></p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills">
+        <div class="skill-group">
+          <h3>Backend</h3>
+          <ul class="tags"><li>C#</li><li>.NET 10</li><li>ASP.NET Core</li><li>REST APIs</li><li>Entity Framework Core</li><li>SQL</li><li>xUnit</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Security</h3>
+          <ul class="tags"><li>OWASP Top 10 / ASVS</li><li>JWT &amp; OAuth concepts</li><li>2FA / TOTP</li><li>Log analysis</li><li>MITRE ATT&amp;CK</li><li>TryHackMe</li><li>CompTIA PenTest+ (studying)</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>DevOps &amp; Tools</h3>
+          <ul class="tags"><li>Git</li><li>Docker</li><li>GitHub Actions</li><li>CodeQL / SARIF</li><li>RabbitMQ</li><li>Firebase</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Frontend &amp; Mobile</h3>
+          <ul class="tags"><li>Flutter / Dart</li><li>Angular</li><li>JavaScript</li><li>HTML / CSS</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3><span lang="en">Also</span><span lang="de">Außerdem</span></h3>
+          <ul class="tags"><li>Python</li><li>C / C++</li><li>Machine Learning basics</li><li>Agile / Scrum</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3><span lang="en">Languages</span><span lang="de">Sprachen</span></h3>
+          <ul class="tags">
+            <li><span lang="en">German B2</span><span lang="de">Deutsch B2</span></li>
+            <li><span lang="en">English fluent</span><span lang="de">Englisch fließend</span></li>
+            <li><span lang="en">Bosnian/Croatian/Serbian native</span><span lang="de">Bosnisch/Kroatisch/Serbisch Muttersprache</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <h2 class="section-title"><span lang="en">Let's talk</span><span lang="de">Lassen Sie uns sprechen</span></h2>
+      <p class="section-intro">
+        <span lang="en">I'm looking for my next role as a junior developer in backend, .NET or IT security, in Frankfurt or remote at a company in Germany.
+          Happy to chat, in German or English.</span>
+        <span lang="de">Ich suche meine nächste Stelle als Junior-Entwickler in Backend, .NET oder IT-Sicherheit, in Frankfurt oder remote bei einem Unternehmen in Deutschland.
+          Ich freue mich auf ein Gespräch, gerne auf Deutsch oder Englisch.</span>
+      </p>
+      <div class="contact-links">
+        <a class="btn primary" href="mailto:karicamar.de@gmail.com">karicamar.de@gmail.com</a>
+        <a class="btn" href="https://linkedin.com/in/amar-karic" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a class="btn" href="https://github.com/karicamar" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> Amar Karic · Frankfurt am Main</p>
+    <p class="privacy">
+      <span lang="en">This site sets no cookies, uses no tracking and loads nothing from third parties. Security headers are checked every week by HeaderGuard.</span>
+      <span lang="de">Diese Seite setzt keine Cookies, nutzt kein Tracking und lädt nichts von Drittanbietern. Die Sicherheits-Header prüft HeaderGuard jede Woche.</span>
+    </p>
+  </footer>
+</body>
+</html>
