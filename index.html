@@ -59,7 +59,7 @@
         <a class="btn ghost" href="https://github.com/karicamar" rel="noopener noreferrer">GitHub ↗</a>
       </div>
       <ul class="facts">
-        <li><strong>140+</strong><span lang="en">automated tests across my projects</span><span lang="de">automatisierte Tests in meinen Projekten</span></li>
+        <li><strong>200+</strong><span lang="en">automated tests across my projects</span><span lang="de">automatisierte Tests in meinen Projekten</span></li>
         <li><strong>B2</strong><span lang="en">German, improving daily in Frankfurt</span><span lang="de">Deutsch, täglich besser in Frankfurt</span></li>
         <li><strong>10</strong><span lang="en">security learning paths completed (SOC, pentesting)</span><span lang="de">abgeschlossene Security-Lernpfade (SOC, Pentesting)</span></li>
       </ul>
@@ -114,12 +114,13 @@
           <p class="project-kicker">.NET 10 · Minimal API · Vanilla JS · MITRE ATT&amp;CK</p>
           <h3>LogSentinel</h3>
           <p>
-            <span lang="en">A lightweight SIEM. It reads SSH, nginx/Apache and application logs and detects brute force, password spraying,
-              SQL injection, scanners and stolen session tokens. Every alert is mapped to MITRE ATT&amp;CK and comes with evidence.</span>
-            <span lang="de">Ein schlankes SIEM: liest SSH-, nginx/Apache- und Anwendungslogs und erkennt Brute Force, Password Spraying,
-              SQL-Injection, Scanner und gestohlene Session-Tokens. Jeder Alarm ist MITRE ATT&amp;CK zugeordnet und mit Belegen versehen.</span>
+            <span lang="en">A lightweight SIEM. It reads Windows Security events, SSH, nginx/Apache and application logs and detects brute force,
+              password spraying, SQL injection, backdoor admin accounts, malicious services and cleared logs. 12 rules, all mapped to MITRE ATT&amp;CK.</span>
+            <span lang="de">Ein schlankes SIEM: liest Windows-Sicherheitsereignisse, SSH-, nginx/Apache- und Anwendungslogs und erkennt Brute Force,
+              Password Spraying, SQL-Injection, Backdoor-Admin-Konten, schädliche Dienste und gelöschte Logs. 12 Regeln nach MITRE ATT&amp;CK.</span>
           </p>
           <ul class="highlights">
+            <li><span lang="en"><strong>Incident correlation</strong>: six alerts become one story: “RDP brute force → login → backdoor admin → log cleared”</span><span lang="de"><strong>Incident-Korrelation</strong>: aus sechs Alarmen wird ein Vorfall: „RDP-Brute-Force → Login → Backdoor-Admin → Log gelöscht“</span></li>
             <li><span lang="en">Escalates to <em>Critical</em> when an attack seems to have worked (login after brute force, SQLi answered with 200)</span><span lang="de">Eskaliert auf <em>Critical</em>, wenn ein Angriff wohl erfolgreich war (Login nach Brute Force, SQLi mit HTTP 200)</span></li>
             <li><span lang="en">Dashboard is hardened against stored XSS from log content (strict CSP, no innerHTML)</span><span lang="de">Dashboard gehärtet gegen Stored XSS aus Logdaten (strikte CSP, kein innerHTML)</span></li>
             <li><span lang="en">CLI with exit codes for cron/CI, Markdown incident reports</span><span lang="de">CLI mit Exit-Codes für Cron/CI, Incident-Reports in Markdown</span></li>
