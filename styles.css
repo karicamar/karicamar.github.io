@@ -125,7 +125,7 @@ main, .footer { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
 .code-visual .dim { color: #64748b; }
 
 .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-.project.small { padding: 28px; }
+.project.small { padding: 28px; grid-column: 1 / -1; }
 .project.small h3 { font-size: 22px; }
 .badge { display: inline-block; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
 
