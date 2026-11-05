@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Amar Karic | .NET Backend & Security Developer</title>
-  <meta name="description" content="Amar Karic: junior software developer in Frankfurt am Main. C#/.NET backend, secure authentication, intrusion detection and DevSecOps tooling.">
+  <meta name="description" content="Amar Karic: junior software developer in Frankfurt am Main. C#/.NET backend, secure authentication, intrusion detection, phishing analysis and DevSecOps tooling.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta property="og:title" content="Amar Karic | .NET Backend & Security Developer">
@@ -59,7 +59,7 @@
         <a class="btn ghost" href="https://github.com/karicamar" rel="noopener noreferrer">GitHub ↗</a>
       </div>
       <ul class="facts">
-        <li><strong>180+</strong><span lang="en">automated tests across my projects</span><span lang="de">automatisierte Tests in meinen Projekten</span></li>
+        <li><strong>400+</strong><span lang="en">automated tests across my projects</span><span lang="de">automatisierte Tests in meinen Projekten</span></li>
         <li><strong>B2</strong><span lang="en">German, improving daily in Frankfurt</span><span lang="de">Deutsch, täglich besser in Frankfurt</span></li>
         <li><strong>10</strong><span lang="en">security learning paths completed (SOC, pentesting)</span><span lang="de">abgeschlossene Security-Lernpfade (SOC, Pentesting)</span></li>
       </ul>
@@ -69,10 +69,10 @@
     <section id="projects" class="section">
       <h2 class="section-title"><span lang="en">Projects</span><span lang="de">Projekte</span></h2>
       <p class="section-intro">
-        <span lang="en">Three projects that show how I work: an authentication service, a tool that detects attacks in its logs,
-          and a scanner that checks a site's security configuration. Each one is tested, documented and runs in CI.</span>
-        <span lang="de">Drei Projekte, die zeigen, wie ich arbeite: ein Authentifizierungs-Service, ein Tool, das Angriffe in dessen Logs
-          erkennt, und ein Scanner für die Sicherheitskonfiguration von Webseiten. Alle getestet, dokumentiert und mit CI.</span>
+        <span lang="en">Five security projects that show how I work: an authentication service, a SIEM that detects attacks in its logs,
+          a scanner for a site's security configuration, a phishing analyzer and a dependency scanner. Each one is tested, documented and runs in CI.</span>
+        <span lang="de">Fünf Security-Projekte, die zeigen, wie ich arbeite: ein Authentifizierungs-Service, ein SIEM, das Angriffe in dessen Logs
+          erkennt, ein Scanner für die Sicherheitskonfiguration von Webseiten, ein Phishing-Analyzer und ein Dependency-Scanner. Alle getestet, dokumentiert und mit CI.</span>
       </p>
 
       <article class="project featured">
@@ -149,6 +149,52 @@
             <li><span lang="en">Scans this website every week in CI</span><span lang="de">Scannt diese Webseite wöchentlich per CI</span></li>
           </ul>
           <a class="link" href="https://github.com/karicamar/headerguard" rel="noopener noreferrer"><span lang="en">Code &amp; docs</span><span lang="de">Code &amp; Doku</span> ↗</a>
+        </div>
+      </article>
+
+      <article class="project featured reverse">
+        <div class="project-visual"><img src="assets/phishlens.png" alt="PhishLens terminal output flagging a PayPal homograph phishing email as malicious, with MITRE ATT&amp;CK techniques and defanged indicators" loading="lazy" width="1240" height="820"></div>
+        <div class="project-body">
+          <p class="project-kicker">.NET Tool · MimeKit · MITRE ATT&amp;CK · SOC</p>
+          <h3>PhishLens</h3>
+          <p>
+            <span lang="en">A phishing email analyzer for SOC triage. It reads a suspicious <code>.eml</code> (never opens anything) and explains
+              why it is dangerous: forged senders, lookalike domains, links whose text lies, and attachments built to slip past filters.
+              The result is a verdict, the evidence, ATT&amp;CK techniques and defanged indicators for the ticket.</span>
+            <span lang="de">Ein Analyse-Tool für Phishing-Mails in der SOC-Triage. Es liest eine verdächtige <code>.eml</code> (ohne etwas zu öffnen)
+              und erklärt, warum sie gefährlich ist: gefälschte Absender, Lookalike-Domains, Links mit falschem Text und Anhänge, die Filter umgehen sollen.
+              Ergebnis: Urteil, Belege, ATT&amp;CK-Techniken und entschärfte IOCs für das Ticket.</span>
+          </p>
+          <ul class="highlights">
+            <li><span lang="en">Catches homographs (<code>pаypal.com</code> with a Cyrillic а), typos and brands hidden in subdomains</span><span lang="de">Erkennt Homographen (<code>pаypal.com</code> mit kyrillischem а), Tippfehler-Domains und Marken in Subdomains</span></li>
+            <li><span lang="en">CEO fraud: a lookalike of your own domain plus replies to Gmail, even when SPF, DKIM and DMARC pass</span><span lang="de">CEO-Fraud: Lookalike der eigenen Domain und Antworten an Gmail, auch wenn SPF, DKIM und DMARC bestehen</span></li>
+            <li><span lang="en">Attachments: double extensions, RLO, encrypted ZIPs, HTML smuggling and fake login pages</span><span lang="de">Anhänge: Doppelendungen, RLO, verschlüsselte ZIPs, HTML-Smuggling und gefälschte Login-Seiten</span></li>
+            <li><span lang="en">German and English, Markdown ticket output, 122 tests</span><span lang="de">Deutsch und Englisch, Ticket-Ausgabe in Markdown, 122 Tests</span></li>
+          </ul>
+          <a class="link" href="https://github.com/karicamar/phishlens" rel="noopener noreferrer"><span lang="en">Code &amp; docs</span><span lang="de">Code &amp; Doku</span> ↗</a>
+        </div>
+      </article>
+
+      <article class="project featured">
+        <div class="project-visual"><img src="assets/depradar.png" alt="DepRadar terminal output listing vulnerable NuGet and npm packages with CVE ids, CVSS scores and the upgrade that fixes them" loading="lazy" width="1240" height="830"></div>
+        <div class="project-body">
+          <p class="project-kicker">.NET Tool · OSV.dev · CVSS · SARIF · CycloneDX</p>
+          <h3>DepRadar</h3>
+          <p>
+            <span lang="en">A dependency scanner (SCA) for .NET and npm. It finds packages with known vulnerabilities, transitive ones included,
+              shows which direct dependency pulls them in, and names the one upgrade that fixes them. In CI it fails the build and
+              reports to GitHub Code Scanning; it also writes an SBOM.</span>
+            <span lang="de">Ein Dependency-Scanner (SCA) für .NET und npm. Findet Pakete mit bekannten Schwachstellen, auch transitive,
+              zeigt, über welche direkte Abhängigkeit sie kommen, und nennt das Upgrade, das sie behebt. In CI bricht er den Build ab und
+              meldet an GitHub Code Scanning; dazu erzeugt er eine SBOM.</span>
+          </p>
+          <ul class="highlights">
+            <li><span lang="en">Implements the CVSS v3.1 base score formula and NuGet/SemVer version ordering</span><span lang="de">Implementiert die CVSS-v3.1-Formel und die Versionslogik von NuGet und SemVer</span></li>
+            <li><span lang="en">Picks the fix on your release line (System.Text.Json 8.0.0 → 8.0.5, not 6.0.10)</span><span lang="de">Wählt den Fix auf der eigenen Release-Linie (System.Text.Json 8.0.0 → 8.0.5, nicht 6.0.10)</span></li>
+            <li><span lang="en">Accepted risks need a reason and expire, so “later” cannot become “never”</span><span lang="de">Akzeptierte Risiken brauchen eine Begründung und laufen ab, damit „später“ nicht „nie“ wird</span></li>
+            <li><span lang="en">CycloneDX 1.6 SBOM (EU Cyber Resilience Act), reusable GitHub Action, 107 tests</span><span lang="de">CycloneDX-1.6-SBOM (EU Cyber Resilience Act), wiederverwendbare GitHub Action, 107 Tests</span></li>
+          </ul>
+          <a class="link" href="https://github.com/karicamar/depradar" rel="noopener noreferrer"><span lang="en">Code &amp; docs</span><span lang="de">Code &amp; Doku</span> ↗</a>
         </div>
       </article>
 
@@ -237,7 +283,7 @@
         </div>
         <div class="skill-group">
           <h3>Security</h3>
-          <ul class="tags"><li>OWASP Top 10 / ASVS</li><li>JWT &amp; OAuth concepts</li><li>2FA / TOTP</li><li>Log analysis</li><li>MITRE ATT&amp;CK</li><li>Penetration testing basics</li><li>CompTIA PenTest+ (preparing)</li></ul>
+          <ul class="tags"><li>OWASP Top 10 / ASVS</li><li>JWT &amp; OAuth concepts</li><li>2FA / TOTP</li><li>Log analysis</li><li>Phishing analysis</li><li>SCA / SBOM (CycloneDX)</li><li>CVSS</li><li>MITRE ATT&amp;CK</li><li>Penetration testing basics</li><li>CompTIA PenTest+ (preparing)</li></ul>
         </div>
         <div class="skill-group">
           <h3>DevOps &amp; Tools</h3>
