@@ -59,7 +59,7 @@
         <a class="btn ghost" href="https://github.com/karicamar" rel="noopener noreferrer">GitHub ↗</a>
       </div>
       <ul class="facts">
-        <li><strong>800+</strong><span lang="en">automated tests across my projects</span><span lang="de">automatisierte Tests in meinen Projekten</span></li>
+        <li><strong>1,100+</strong><span lang="en">automated tests across my projects</span><span lang="de">automatisierte Tests in meinen Projekten</span></li>
         <li><strong>B2</strong><span lang="en">German, improving daily in Frankfurt</span><span lang="de">Deutsch, täglich besser in Frankfurt</span></li>
         <li><strong>10</strong><span lang="en">security learning paths completed (SOC, pentesting)</span><span lang="de">abgeschlossene Security-Lernpfade (SOC, Pentesting)</span></li>
       </ul>
@@ -265,6 +265,48 @@
         </div>
       </article>
 
+      <article class="project featured">
+        <div class="project-visual"><img src="assets/bauplan.png" alt="Bauplan terminal output reviewing a Terraform pull request: an SQL firewall open to the whole Internet and an RDP rule introduced by the change, findings that existed before, and two fixed by it" loading="lazy" width="1400" height="830"></div>
+        <div class="project-body">
+          <p class="project-kicker">.NET Tool · Terraform · Azure (azurerm) · SARIF</p>
+          <h3>Bauplan</h3>
+          <p>
+            <span lang="en">A security review of Terraform plans for Azure, before <code>terraform apply</code>. It tells the pull request
+              reviewer what the change destroys, which security problems it introduces and which it fixes.</span>
+            <span lang="de">Ein Sicherheits-Review von Terraform-Plänen für Azure, vor dem <code>terraform apply</code>. Es zeigt im Pull
+              Request, was die Änderung zerstört, welche Sicherheitsprobleme sie einführt und welche sie behebt.</span>
+          </p>
+          <ul class="highlights">
+            <li><span lang="en">A renamed SQL server means an empty new database: flagged as critical, with the attribute that forces it</span><span lang="de">Ein umbenannter SQL-Server bedeutet eine leere neue Datenbank: kritisch gemeldet, mit dem Attribut, das den Austausch erzwingt</span></li>
+            <li><span lang="en">18 checks: RDP/SSH and database ports open to the Internet, public storage, TLS 1.0, plaintext secrets, Owner on a subscription</span><span lang="de">18 Prüfungen: offene RDP-/SSH- und Datenbankports, öffentlicher Storage, TLS 1.0, Klartext-Secrets, Owner auf der Subscription</span></li>
+            <li><span lang="en">Compares before and after, so a team only fails on what a pull request makes worse</span><span lang="de">Vergleicht vorher und nachher, damit nur fehlschlägt, was ein Pull Request verschlechtert</span></li>
+            <li><span lang="en">Checked against the real azurerm provider schema in CI; SARIF points at the .tf line; 145 tests</span><span lang="de">In der CI gegen das echte azurerm-Provider-Schema geprüft; SARIF zeigt auf die .tf-Zeile; 145 Tests</span></li>
+          </ul>
+          <a class="link" href="https://github.com/karicamar/bauplan" rel="noopener noreferrer"><span lang="en">Code &amp; docs</span><span lang="de">Code &amp; Doku</span> ↗</a>
+        </div>
+      </article>
+
+      <article class="project featured reverse">
+        <div class="project-visual"><img src="assets/piiscout.png" alt="PiiScout terminal output listing personal data found in a helpdesk ticket and a CRM export, all values masked: email addresses, IBANs, a tax ID, a diagnosis code and a religion column" loading="lazy" width="1240" height="830"></div>
+        <div class="project-body">
+          <p class="project-kicker">.NET Tool · GDPR / DSGVO · SARIF · Redaction</p>
+          <h3>PiiScout</h3>
+          <p>
+            <span lang="en">Finds personal data in files, logs, exports and test fixtures, the copies nobody planned for. Every hit is
+              validated, reported only masked, and summed up in a data map for the data protection officer.</span>
+            <span lang="de">Findet personenbezogene Daten in Dateien, Logs, Exporten und Testdaten, also die Kopien, die niemand geplant hat.
+              Jeder Treffer wird validiert, nur maskiert ausgegeben und in einer Datenkarte für den Datenschutzbeauftragten zusammengefasst.</span>
+          </p>
+          <ul class="highlights">
+            <li><span lang="en">Check digits instead of guessing: IBAN, cards, Steuer-ID, Personalausweis, Sozialversicherungsnummer</span><span lang="de">Prüfziffern statt Raten: IBAN, Karten, Steuer-ID, Personalausweis, Sozialversicherungsnummer</span></li>
+            <li><span lang="en">Reads CSV columns, JSON and XML fields; finds Art. 9 data like health or the church tax field in payroll</span><span lang="de">Liest CSV-Spalten, JSON- und XML-Felder; findet Art.-9-Daten wie Gesundheit oder das Kirchensteuermerkmal</span></li>
+            <li><span lang="en">Redacts or pseudonymizes a log before it goes to a vendor; the copy is tested to scan clean</span><span lang="de">Schwärzt oder pseudonymisiert ein Log vor der Weitergabe; die Kopie wird auf Sauberkeit getestet</span></li>
+            <li><span lang="en">Never prints a value; keyed fingerprints count people; CI gate with SARIF; 224 tests</span><span lang="de">Gibt nie einen Wert aus; Fingerprints mit Schlüssel zählen Personen; CI-Gate mit SARIF; 224 Tests</span></li>
+          </ul>
+          <a class="link" href="https://github.com/karicamar/piiscout" rel="noopener noreferrer"><span lang="en">Code &amp; docs</span><span lang="de">Code &amp; Doku</span> ↗</a>
+        </div>
+      </article>
+
       <div class="project-grid">
         <article class="project small">
           <p class="project-kicker">C# · .NET · EF Core · Flutter · Docker</p>
@@ -354,11 +396,11 @@
         </div>
         <div class="skill-group">
           <h3>Security</h3>
-          <ul class="tags"><li>OWASP Top 10 / ASVS</li><li>JWT &amp; OAuth concepts</li><li>2FA / TOTP</li><li>Log analysis</li><li>Phishing analysis</li><li>SCA / SBOM (CycloneDX)</li><li>CVSS</li><li>MITRE ATT&amp;CK</li><li>Penetration testing basics</li><li>CompTIA PenTest+ (preparing)</li></ul>
+          <ul class="tags"><li>OWASP Top 10 / ASVS</li><li>JWT &amp; OAuth concepts</li><li>2FA / TOTP</li><li>Log analysis</li><li>Phishing analysis</li><li>SCA / SBOM (CycloneDX)</li><li>CVSS</li><li>GDPR / DSGVO</li><li>Cloud security (Azure)</li><li>MITRE ATT&amp;CK</li><li>Penetration testing basics</li><li>CompTIA PenTest+ (preparing)</li></ul>
         </div>
         <div class="skill-group">
           <h3>DevOps &amp; Tools</h3>
-          <ul class="tags"><li>Git</li><li>Docker</li><li>GitHub Actions</li><li>CodeQL / SARIF</li><li>RabbitMQ</li><li>Firebase</li></ul>
+          <ul class="tags"><li>Git</li><li>Docker</li><li>GitHub Actions</li><li>CodeQL / SARIF</li><li>Terraform (azurerm)</li><li>RabbitMQ</li><li>Firebase</li></ul>
         </div>
         <div class="skill-group">
           <h3>Frontend &amp; Mobile</h3>
