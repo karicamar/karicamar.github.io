@@ -59,7 +59,7 @@
         <a class="btn ghost" href="https://github.com/karicamar" rel="noopener noreferrer">GitHub ↗</a>
       </div>
       <ul class="facts">
-        <li><strong>690+</strong><span lang="en">automated tests across my projects</span><span lang="de">automatisierte Tests in meinen Projekten</span></li>
+        <li><strong>800+</strong><span lang="en">automated tests across my projects</span><span lang="de">automatisierte Tests in meinen Projekten</span></li>
         <li><strong>B2</strong><span lang="en">German, improving daily in Frankfurt</span><span lang="de">Deutsch, täglich besser in Frankfurt</span></li>
         <li><strong>10</strong><span lang="en">security learning paths completed (SOC, pentesting)</span><span lang="de">abgeschlossene Security-Lernpfade (SOC, Pentesting)</span></li>
       </ul>
@@ -69,11 +69,11 @@
     <section id="projects" class="section">
       <h2 class="section-title"><span lang="en">Projects</span><span lang="de">Projekte</span></h2>
       <p class="section-intro">
-        <span lang="en">Seven projects that show how I work: a payments back office with the controls a bank needs, an incident desk for DORA reporting, an authentication service,
+        <span lang="en">Eight projects that show how I work: a payments back office with the controls a bank needs, an incident desk for DORA reporting, an access review tool, an authentication service,
           a SIEM that detects attacks in its logs, a scanner for a site's security configuration, a phishing analyzer and a dependency scanner.
           Each one is tested, documented and runs in CI.</span>
-        <span lang="de">Sieben Projekte, die zeigen, wie ich arbeite: ein Zahlungs-Backoffice mit den Kontrollen, die eine Bank braucht, ein Vorfall-Desk
-          für DORA-Meldungen, ein Authentifizierungs-Service, ein SIEM, das Angriffe in dessen Logs erkennt, ein Scanner für die Sicherheitskonfiguration von Webseiten,
+        <span lang="de">Acht Projekte, die zeigen, wie ich arbeite: ein Zahlungs-Backoffice mit den Kontrollen, die eine Bank braucht, ein Vorfall-Desk
+          für DORA-Meldungen, ein Tool zur Rezertifizierung von Zugriffsrechten, ein Authentifizierungs-Service, ein SIEM, das Angriffe in dessen Logs erkennt, ein Scanner für die Sicherheitskonfiguration von Webseiten,
           ein Phishing-Analyzer und ein Dependency-Scanner. Alle getestet, dokumentiert und mit CI.</span>
       </p>
 
@@ -122,6 +122,27 @@
       </article>
 
       <article class="project featured">
+        <div class="project-visual"><img src="assets/role-call.png" alt="RoleCall overview: critical findings such as a leaver with active access and a segregation-of-duties conflict, and the progress of an access review campaign per manager" loading="lazy" width="1040" height="760"></div>
+        <div class="project-body">
+          <p class="project-kicker">ASP.NET Core 10 · Razor Pages · EF Core · IAM · Segregation of duties</p>
+          <h3>RoleCall</h3>
+          <p>
+            <span lang="en">Access recertification for banks: compare the HR feed with the accounts of every application, find
+              what should not be there, and let each manager confirm or revoke their people's access, with evidence for the auditors.</span>
+            <span lang="de">Rezertifizierung von Zugriffsrechten für Banken: HR-Abzug mit den Konten aller Anwendungen abgleichen,
+              Auffälligkeiten finden und jede Führungskraft die Rechte ihres Teams bestätigen oder entziehen lassen, mit Nachweis für die Revision.</span>
+          </p>
+          <ul class="ticks">
+            <li><span lang="en">Finds leavers who still log in, orphaned and dormant accounts, and movers who kept their old access</span><span lang="de">Findet Ausgeschiedene, die sich noch anmelden, verwaiste und ungenutzte Konten und Abteilungswechsler mit alten Rechten</span></li>
+            <li><span lang="en">Segregation-of-duties rules across applications, e.g. creating and approving payments</span><span lang="de">Funktionstrennung über Anwendungen hinweg, z. B. Zahlungen erfassen und freigeben</span></li>
+            <li><span lang="en">Nobody reviews their own access; risky access needs a reason; clicked-through reviews are flagged</span><span lang="de">Niemand prüft die eigenen Rechte; riskante Rechte brauchen eine Begründung; durchgeklickte Prüfungen werden markiert</span></li>
+            <li><span lang="en">No JavaScript, CSP default-src 'none', hash-chained audit trail; 115 tests plus a browser test in CI</span><span lang="de">Kein JavaScript, CSP default-src 'none', Audit-Trail als Hash-Kette; 115 Tests und ein Browser-Test in der CI</span></li>
+          </ul>
+          <a class="link" href="https://github.com/karicamar/role-call" rel="noopener noreferrer"><span lang="en">Code &amp; docs</span><span lang="de">Code &amp; Doku</span> ↗</a>
+        </div>
+      </article>
+
+      <article class="project featured reverse">
         <div class="project-visual code-visual" aria-hidden="true">
           <div class="term-bar"><i></i><i></i><i></i><span>SecureAuth.Tests</span></div>
 <pre><span class="ok">✓</span> Reusing_a_rotated_refresh_token_revokes_the_whole_session_family
@@ -154,7 +175,7 @@
         </div>
       </article>
 
-      <article class="project featured reverse">
+      <article class="project featured">
         <div class="project-visual"><img src="assets/logsentinel.png" alt="LogSentinel dashboard showing critical alerts, an activity timeline and MITRE ATT&amp;CK techniques" loading="lazy" width="1400" height="1100"></div>
         <div class="project-body">
           <p class="project-kicker">.NET 10 · Minimal API · Vanilla JS · MITRE ATT&amp;CK</p>
@@ -175,7 +196,7 @@
         </div>
       </article>
 
-      <article class="project featured">
+      <article class="project featured reverse">
         <div class="project-visual"><img src="assets/headerguard.png" alt="HeaderGuard HTML report grading example.com with an E and listing missing security headers" loading="lazy" width="1000" height="620"></div>
         <div class="project-body">
           <p class="project-kicker">.NET Tool · TLS · CSP · SARIF · GitHub Actions</p>
@@ -198,7 +219,7 @@
         </div>
       </article>
 
-      <article class="project featured reverse">
+      <article class="project featured">
         <div class="project-visual"><img src="assets/phishlens.png" alt="PhishLens terminal output flagging a PayPal homograph phishing email as malicious, with MITRE ATT&amp;CK techniques and defanged indicators" loading="lazy" width="1240" height="820"></div>
         <div class="project-body">
           <p class="project-kicker">.NET Tool · MimeKit · MITRE ATT&amp;CK · SOC</p>
@@ -221,7 +242,7 @@
         </div>
       </article>
 
-      <article class="project featured">
+      <article class="project featured reverse">
         <div class="project-visual"><img src="assets/depradar.png" alt="DepRadar terminal output listing vulnerable NuGet and npm packages with CVE ids, CVSS scores and the upgrade that fixes them" loading="lazy" width="1240" height="830"></div>
         <div class="project-body">
           <p class="project-kicker">.NET Tool · OSV.dev · CVSS · SARIF · CycloneDX</p>
@@ -325,7 +346,7 @@
       <div class="skills">
         <div class="skill-group">
           <h3>Backend</h3>
-          <ul class="tags"><li>C#</li><li>.NET 10</li><li>ASP.NET Core</li><li>Blazor</li><li>REST APIs</li><li>Entity Framework Core</li><li>SQL</li><li>xUnit</li><li>bUnit</li></ul>
+          <ul class="tags"><li>C#</li><li>.NET 10</li><li>ASP.NET Core</li><li>Blazor</li><li>REST APIs</li><li>Entity Framework Core</li><li>SQL</li><li>xUnit</li><li>bUnit</li><li>Razor Pages</li></ul>
         </div>
         <div class="skill-group">
           <h3><span lang="en">Banking &amp; payments</span><span lang="de">Banking &amp; Zahlungsverkehr</span></h3>
