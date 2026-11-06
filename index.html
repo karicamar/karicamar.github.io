@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Amar Karic | .NET Backend & Security Developer</title>
-  <meta name="description" content="Amar Karic: junior software developer in Frankfurt am Main. C#/.NET backend, payments and banking controls, secure authentication, intrusion detection, phishing analysis and DevSecOps tooling.">
+  <meta name="description" content="Amar Karic: junior software developer in Frankfurt am Main. C#/.NET backend, payments and banking controls, DORA incident reporting, secure authentication, intrusion detection, phishing analysis and DevSecOps tooling.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta property="og:title" content="Amar Karic | .NET Backend & Security Developer">
@@ -59,7 +59,7 @@
         <a class="btn ghost" href="https://github.com/karicamar" rel="noopener noreferrer">GitHub ↗</a>
       </div>
       <ul class="facts">
-        <li><strong>550+</strong><span lang="en">automated tests across my projects</span><span lang="de">automatisierte Tests in meinen Projekten</span></li>
+        <li><strong>690+</strong><span lang="en">automated tests across my projects</span><span lang="de">automatisierte Tests in meinen Projekten</span></li>
         <li><strong>B2</strong><span lang="en">German, improving daily in Frankfurt</span><span lang="de">Deutsch, täglich besser in Frankfurt</span></li>
         <li><strong>10</strong><span lang="en">security learning paths completed (SOC, pentesting)</span><span lang="de">abgeschlossene Security-Lernpfade (SOC, Pentesting)</span></li>
       </ul>
@@ -69,11 +69,11 @@
     <section id="projects" class="section">
       <h2 class="section-title"><span lang="en">Projects</span><span lang="de">Projekte</span></h2>
       <p class="section-intro">
-        <span lang="en">Six projects that show how I work: a payments back office with the controls a bank needs, an authentication service,
+        <span lang="en">Seven projects that show how I work: a payments back office with the controls a bank needs, an incident desk for DORA reporting, an authentication service,
           a SIEM that detects attacks in its logs, a scanner for a site's security configuration, a phishing analyzer and a dependency scanner.
           Each one is tested, documented and runs in CI.</span>
-        <span lang="de">Sechs Projekte, die zeigen, wie ich arbeite: ein Zahlungs-Backoffice mit den Kontrollen, die eine Bank braucht, ein
-          Authentifizierungs-Service, ein SIEM, das Angriffe in dessen Logs erkennt, ein Scanner für die Sicherheitskonfiguration von Webseiten,
+        <span lang="de">Sieben Projekte, die zeigen, wie ich arbeite: ein Zahlungs-Backoffice mit den Kontrollen, die eine Bank braucht, ein Vorfall-Desk
+          für DORA-Meldungen, ein Authentifizierungs-Service, ein SIEM, das Angriffe in dessen Logs erkennt, ein Scanner für die Sicherheitskonfiguration von Webseiten,
           ein Phishing-Analyzer und ein Dependency-Scanner. Alle getestet, dokumentiert und mit CI.</span>
       </p>
 
@@ -101,6 +101,27 @@
       </article>
 
       <article class="project featured reverse">
+        <div class="project-visual"><img src="assets/dora-desk.png" alt="DORA Desk dashboard: an overdue initial notification to BaFin, an incident waiting for classification and an intermediate report due tomorrow" loading="lazy" width="1040" height="760"></div>
+        <div class="project-body">
+          <p class="project-kicker">Blazor · ASP.NET Core 10 · EF Core · DORA · bUnit</p>
+          <h3>DORA Desk</h3>
+          <p>
+            <span lang="en">ICT incident management for banks under the EU's Digital Operational Resilience Act: assess an incident
+              against the seven EU criteria, classify it with a reason for each one, and keep every reporting deadline to BaFin.</span>
+            <span lang="de">IKT-Vorfallmanagement für Banken nach DORA: Auswirkungen anhand der sieben EU-Kriterien bewerten, mit
+              Begründung je Kriterium einstufen und jede Meldefrist an die BaFin einhalten.</span>
+          </p>
+          <ul class="ticks">
+            <li><span lang="en">The classification updates as you type and cites the article behind each criterion</span><span lang="de">Die Einstufung aktualisiert sich beim Tippen und nennt den Artikel hinter jedem Kriterium</span></li>
+            <li><span lang="en">Live deadline chain: initial notification within 4 h (max. 24 h), intermediate after 72 h, final after a month</span><span lang="de">Fristenkette live: Erstmeldung in 4 h (max. 24 h), Zwischenmeldung nach 72 h, Abschlussmeldung nach einem Monat</span></li>
+            <li><span lang="en">Four-eyes principle on every report; a report of outdated facts cannot be submitted</span><span lang="de">Vier-Augen-Prinzip für jede Meldung; eine Meldung mit veralteten Fakten lässt sich nicht freigeben</span></li>
+            <li><span lang="en">Imports LogSentinel alerts as evidence; real-browser test in CI under a strict CSP; 113 tests</span><span lang="de">Importiert LogSentinel-Alarme als Beweismittel; Browser-Test in der CI unter strikter CSP; 113 Tests</span></li>
+          </ul>
+          <a class="link" href="https://github.com/karicamar/dora-desk" rel="noopener noreferrer"><span lang="en">Code &amp; docs</span><span lang="de">Code &amp; Doku</span> ↗</a>
+        </div>
+      </article>
+
+      <article class="project featured">
         <div class="project-visual code-visual" aria-hidden="true">
           <div class="term-bar"><i></i><i></i><i></i><span>SecureAuth.Tests</span></div>
 <pre><span class="ok">✓</span> Reusing_a_rotated_refresh_token_revokes_the_whole_session_family
@@ -133,7 +154,7 @@
         </div>
       </article>
 
-      <article class="project featured">
+      <article class="project featured reverse">
         <div class="project-visual"><img src="assets/logsentinel.png" alt="LogSentinel dashboard showing critical alerts, an activity timeline and MITRE ATT&amp;CK techniques" loading="lazy" width="1400" height="1100"></div>
         <div class="project-body">
           <p class="project-kicker">.NET 10 · Minimal API · Vanilla JS · MITRE ATT&amp;CK</p>
@@ -154,7 +175,7 @@
         </div>
       </article>
 
-      <article class="project featured reverse">
+      <article class="project featured">
         <div class="project-visual"><img src="assets/headerguard.png" alt="HeaderGuard HTML report grading example.com with an E and listing missing security headers" loading="lazy" width="1000" height="620"></div>
         <div class="project-body">
           <p class="project-kicker">.NET Tool · TLS · CSP · SARIF · GitHub Actions</p>
@@ -177,7 +198,7 @@
         </div>
       </article>
 
-      <article class="project featured">
+      <article class="project featured reverse">
         <div class="project-visual"><img src="assets/phishlens.png" alt="PhishLens terminal output flagging a PayPal homograph phishing email as malicious, with MITRE ATT&amp;CK techniques and defanged indicators" loading="lazy" width="1240" height="820"></div>
         <div class="project-body">
           <p class="project-kicker">.NET Tool · MimeKit · MITRE ATT&amp;CK · SOC</p>
@@ -200,7 +221,7 @@
         </div>
       </article>
 
-      <article class="project featured reverse">
+      <article class="project featured">
         <div class="project-visual"><img src="assets/depradar.png" alt="DepRadar terminal output listing vulnerable NuGet and npm packages with CVE ids, CVSS scores and the upgrade that fixes them" loading="lazy" width="1240" height="830"></div>
         <div class="project-body">
           <p class="project-kicker">.NET Tool · OSV.dev · CVSS · SARIF · CycloneDX</p>
@@ -304,11 +325,11 @@
       <div class="skills">
         <div class="skill-group">
           <h3>Backend</h3>
-          <ul class="tags"><li>C#</li><li>.NET 10</li><li>ASP.NET Core</li><li>REST APIs</li><li>Entity Framework Core</li><li>SQL</li><li>xUnit</li></ul>
+          <ul class="tags"><li>C#</li><li>.NET 10</li><li>ASP.NET Core</li><li>Blazor</li><li>REST APIs</li><li>Entity Framework Core</li><li>SQL</li><li>xUnit</li><li>bUnit</li></ul>
         </div>
         <div class="skill-group">
           <h3><span lang="en">Banking &amp; payments</span><span lang="de">Banking &amp; Zahlungsverkehr</span></h3>
-          <ul class="tags"><li>SEPA</li><li>ISO 20022 (pain.001, camt.053)</li><li><span lang="en">Double-entry bookkeeping</span><span lang="de">Doppelte Buchführung</span></li><li><span lang="en">Four-eyes principle</span><span lang="de">Vier-Augen-Prinzip</span></li><li><span lang="en">AML &amp; sanctions screening</span><span lang="de">AML &amp; Sanktionslisten-Screening</span></li><li>Verification of Payee</li><li><span lang="en">Idempotency &amp; concurrency</span><span lang="de">Idempotenz &amp; Nebenläufigkeit</span></li></ul>
+          <ul class="tags"><li>SEPA</li><li>ISO 20022 (pain.001, camt.053)</li><li><span lang="en">Double-entry bookkeeping</span><span lang="de">Doppelte Buchführung</span></li><li><span lang="en">Four-eyes principle</span><span lang="de">Vier-Augen-Prinzip</span></li><li><span lang="en">AML &amp; sanctions screening</span><span lang="de">AML &amp; Sanktionslisten-Screening</span></li><li>Verification of Payee</li><li><span lang="en">DORA incident classification &amp; reporting</span><span lang="de">DORA-Vorfallklassifizierung &amp; -meldung</span></li><li><span lang="en">Idempotency &amp; concurrency</span><span lang="de">Idempotenz &amp; Nebenläufigkeit</span></li></ul>
         </div>
         <div class="skill-group">
           <h3>Security</h3>
