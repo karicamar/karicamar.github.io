@@ -80,7 +80,7 @@
       <article class="project featured">
         <div class="project-visual"><img src="assets/kontor.png" alt="Kontor payments back office: approval queue with transfers waiting for a second person and the AML findings that flagged them" loading="lazy" width="1400" height="760"></div>
         <div class="project-body">
-          <p class="project-kicker">ASP.NET Core 10 · EF Core · ISO 20022 · SEPA · xUnit</p>
+          <p class="project-kicker">ASP.NET Core 10 · EF Core · PostgreSQL · ISO 20022 · SEPA</p>
           <h3>Kontor</h3>
           <p>
             <span lang="en">A payments back office of the kind banks and fintechs run: a double-entry ledger, four-eyes approval,
@@ -94,7 +94,7 @@
             <li><span lang="en">The person who enters a transfer can never approve it, and the attempt is logged as a security event</span><span lang="de">Wer eine Überweisung erfasst, kann sie nie selbst freigeben; der Versuch wird als Security-Event protokolliert</span></li>
             <li><span lang="en">Catches payments split to stay below the approval limit; 20 parallel requests cannot overdraw an account</span><span lang="de">Erkennt Zahlungen, die unter der Freigabegrenze gestückelt werden; 20 parallele Requests können kein Konto überziehen</span></li>
             <li><span lang="en">Every generated XML file is validated against the official ISO 20022 schemas in the tests</span><span lang="de">Jede erzeugte XML-Datei wird in den Tests gegen die offiziellen ISO-20022-Schemas validiert</span></li>
-            <li><span lang="en">Hash-chained audit trail: a record edited in the database is found; 146 tests</span><span lang="de">Audit-Trail als Hash-Kette: ein in der Datenbank geänderter Eintrag wird gefunden; 146 Tests</span></li>
+            <li><span lang="en">Hash-chained audit trail: a record edited in the database is found; 147 tests</span><span lang="de">Audit-Trail als Hash-Kette: ein in der Datenbank geänderter Eintrag wird gefunden; 147 Tests</span></li>
           </ul>
           <a class="link" href="https://github.com/karicamar/kontor" rel="noopener noreferrer"><span lang="en">Code &amp; docs</span><span lang="de">Code &amp; Doku</span> ↗</a>
         </div>
