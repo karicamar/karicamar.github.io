@@ -359,6 +359,36 @@
         </div>
       </article>
 
+      <article class="project featured">
+        <div class="project-visual code-visual" aria-hidden="true">
+          <div class="term-bar"><i></i><i></i><i></i><span>zertwacht --list targets.txt</span></div>
+<pre><span class="bad">CRITICAL</span> expired.badssl.com        <span class="dim">-4227 days</span>
+         expired on 2015-04-12
+<span class="bad">CRITICAL</span> wrong.host.badssl.com       <span class="dim">50 days</span>
+         not valid for wrong.host.badssl.com
+<span class="bad">CRITICAL</span> incomplete-chain.badssl.com <span class="dim">50 days</span>
+         the server does not send the intermediate
+<span class="ok">OK</span>       karicamar.github.io         <span class="dim">52 days</span>
+<span class="ok">OK</span>       github.com                  <span class="dim">81 days</span></pre>
+        </div>
+        <div class="project-body">
+          <p class="project-kicker">.NET Tool · X.509 · TLS · Monitoring</p>
+          <h3>Zertwacht</h3>
+          <p>
+            <span lang="en">A TLS certificate monitor: it warns before certificates expire and finds what breaks clients while the browser still shows
+              the padlock, like a missing intermediate certificate.</span>
+            <span lang="de">Ein Monitor für TLS-Zertifikate: warnt vor dem Ablauf und findet, was Clients scheitern lässt, während der Browser noch das
+              Schloss zeigt, etwa ein fehlendes Zwischenzertifikat.</span>
+          </p>
+          <ul class="highlights">
+            <li><span lang="en">Expiry, hostname (RFC 6125 wildcards), chain, SHA-1, weak keys, self-signed, lifetime over 398 days</span><span lang="de">Ablauf, Hostname (Wildcards nach RFC 6125), Kette, SHA-1, schwache Schlüssel, selbstsigniert, Laufzeit über 398 Tage</span></li>
+            <li><span lang="en">Checks the chain the server actually sends, so a locally cached intermediate cannot hide the problem</span><span lang="de">Prüft die Kette, die der Server wirklich sendet, damit ein lokal gecachtes Zwischenzertifikat nichts verdeckt</span></li>
+            <li><span lang="en">Watches my own site daily in CI; 36 tests on certificates built in memory</span><span lang="de">Überwacht meine eigene Seite täglich in der CI; 36 Tests mit im Speicher erzeugten Zertifikaten</span></li>
+          </ul>
+          <a class="link" href="https://github.com/karicamar/zertwacht" rel="noopener noreferrer"><span lang="en">Code &amp; docs</span><span lang="de">Code &amp; Doku</span> ↗</a>
+        </div>
+      </article>
+
       <div class="project-grid">
         <article class="project small">
           <p class="project-kicker">C# · .NET · EF Core · Flutter · Docker</p>
