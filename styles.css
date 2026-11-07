@@ -123,6 +123,7 @@ main, .footer { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
 .code-visual pre { margin: 0; padding: 18px 16px; color: var(--code-text); font-size: 12.5px; line-height: 1.85; overflow-x: auto; font-family: ui-monospace, "Cascadia Code", Consolas, monospace; }
 .code-visual .ok { color: #34d399; }
 .code-visual .dim { color: #64748b; }
+.code-visual .bad { color: #f87171; }
 
 .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
 .project.small { padding: 28px; grid-column: 1 / -1; }
