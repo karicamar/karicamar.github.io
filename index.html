@@ -59,7 +59,7 @@
         <a class="btn ghost" href="https://github.com/karicamar" rel="noopener noreferrer">GitHub ↗</a>
       </div>
       <ul class="facts">
-        <li><strong>1,200+</strong><span lang="en">automated tests across my projects</span><span lang="de">automatisierte Tests in meinen Projekten</span></li>
+        <li><strong>1,500+</strong><span lang="en">automated tests across my projects</span><span lang="de">automatisierte Tests in meinen Projekten</span></li>
         <li><strong>B2</strong><span lang="en">German, improving daily in Frankfurt</span><span lang="de">Deutsch, täglich besser in Frankfurt</span></li>
         <li><strong>10</strong><span lang="en">security learning paths completed (SOC, pentesting)</span><span lang="de">abgeschlossene Security-Lernpfade (SOC, Pentesting)</span></li>
       </ul>
@@ -69,12 +69,13 @@
     <section id="projects" class="section">
       <h2 class="section-title"><span lang="en">Projects</span><span lang="de">Projekte</span></h2>
       <p class="section-intro">
-        <span lang="en">Eight projects that show how I work: a payments back office with the controls a bank needs, an incident desk for DORA reporting, an access review tool, an authentication service,
-          a SIEM that detects attacks in its logs, a scanner for a site's security configuration, a phishing analyzer and a dependency scanner.
-          Each one is tested, documented and runs in CI.</span>
-        <span lang="de">Acht Projekte, die zeigen, wie ich arbeite: ein Zahlungs-Backoffice mit den Kontrollen, die eine Bank braucht, ein Vorfall-Desk
-          für DORA-Meldungen, ein Tool zur Rezertifizierung von Zugriffsrechten, ein Authentifizierungs-Service, ein SIEM, das Angriffe in dessen Logs erkennt, ein Scanner für die Sicherheitskonfiguration von Webseiten,
-          ein Phishing-Analyzer und ein Dependency-Scanner. Alle getestet, dokumentiert und mit CI.</span>
+        <span lang="en">These projects show how I work: business applications with the controls a bank needs (a payments back office, an incident desk
+          for DORA reporting, an access review tool, an authentication service) and security tools for SOC, cloud and DevSecOps work, from a SIEM and a
+          phishing analyzer to scanners for Terraform plans, containers, dependencies and personal data. Each one is tested, documented and runs in CI.</span>
+        <span lang="de">Diese Projekte zeigen, wie ich arbeite: Fachanwendungen mit den Kontrollen, die eine Bank braucht (ein Zahlungs-Backoffice, ein
+          Vorfall-Desk für DORA-Meldungen, ein Tool zur Rezertifizierung von Zugriffsrechten, ein Authentifizierungs-Service) und Security-Tools für SOC,
+          Cloud und DevSecOps, vom SIEM und Phishing-Analyzer bis zu Scannern für Terraform-Pläne, Container, Abhängigkeiten und personenbezogene Daten.
+          Alle getestet, dokumentiert und mit CI.</span>
       </p>
 
       <article class="project featured">
@@ -389,6 +390,37 @@
         </div>
       </article>
 
+      <article class="project featured">
+        <div class="project-visual code-visual" aria-hidden="true">
+          <div class="term-bar"><i></i><i></i><i></i><span>hafenmeister deploy/ Dockerfile</span></div>
+<pre><span class="bad">CRITICAL</span> DaemonSet/log-agent  <span class="dim">K8S003</span>
+         mounts /var/run/docker.sock from the node
+<span class="bad">CRITICAL</span> ClusterRoleBinding/ci <span class="dim">K8S030</span>
+         full control of the whole cluster
+<span class="bad">HIGH</span>     Dockerfile:9         <span class="dim">DF005</span>
+         curl ... | bash runs an unverified download
+
+Deployment/payments-api  <span class="ok">restricted</span>
+DaemonSet/log-agent      <span class="bad">privileged</span></pre>
+        </div>
+        <div class="project-body">
+          <p class="project-kicker">.NET Tool · Docker · Kubernetes · DevSecOps</p>
+          <h3>Hafenmeister</h3>
+          <p>
+            <span lang="en">Security checks for Dockerfiles, Kubernetes manifests and Compose files in the pull request: root containers, privileged
+              pods, the Docker socket, secrets in ENV, cluster-admin bindings, databases published past the firewall.</span>
+            <span lang="de">Sicherheitsprüfung für Dockerfiles, Kubernetes-Manifeste und Compose-Dateien im Pull Request: Container als root,
+              privilegierte Pods, Docker-Socket, Passwörter in ENV, cluster-admin, an der Firewall vorbei veröffentlichte Datenbanken.</span>
+          </p>
+          <ul class="highlights">
+            <li><span lang="en">Pod Security Standards level for every workload, checked against a real Kubernetes API server in CI</span><span lang="de">Pod-Security-Standards-Stufe für jeden Workload, in der CI gegen einen echten Kubernetes-API-Server geprüft</span></li>
+            <li><span lang="en">40 rules from the CIS benchmarks and Kubernetes docs, each with line, reason and fix; SARIF for Code Scanning</span><span lang="de">40 Regeln aus CIS-Benchmarks und Kubernetes-Doku, jeweils mit Zeile, Begründung und Lösung; SARIF für Code Scanning</span></li>
+            <li><span lang="en">Accepted risks need a written reason; 160 tests, samples validated with kubeconform</span><span lang="de">Akzeptierte Risiken brauchen eine Begründung; 160 Tests, Beispiele mit kubeconform validiert</span></li>
+          </ul>
+          <a class="link" href="https://github.com/karicamar/hafenmeister" rel="noopener noreferrer"><span lang="en">Code &amp; docs</span><span lang="de">Code &amp; Doku</span> ↗</a>
+        </div>
+      </article>
+
       <div class="project-grid">
         <article class="project small">
           <p class="project-kicker">C# · .NET · EF Core · Flutter · Docker</p>
@@ -482,7 +514,7 @@
         </div>
         <div class="skill-group">
           <h3>DevOps &amp; Tools</h3>
-          <ul class="tags"><li>Git</li><li>Docker</li><li>GitHub Actions</li><li>CodeQL / SARIF</li><li>Terraform (azurerm)</li><li>RabbitMQ</li><li>Firebase</li></ul>
+          <ul class="tags"><li>Git</li><li>Docker</li><li>Kubernetes</li><li>GitHub Actions</li><li>CodeQL / SARIF</li><li>Terraform (azurerm)</li><li>RabbitMQ</li><li>Firebase</li></ul>
         </div>
         <div class="skill-group">
           <h3>Frontend &amp; Mobile</h3>
