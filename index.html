@@ -59,7 +59,7 @@
         <a class="btn ghost" href="https://github.com/karicamar" rel="noopener noreferrer">GitHub ↗</a>
       </div>
       <ul class="facts">
-        <li><strong>1,500+</strong><span lang="en">automated tests across my projects</span><span lang="de">automatisierte Tests in meinen Projekten</span></li>
+        <li><strong>1,600+</strong><span lang="en">automated tests across my projects</span><span lang="de">automatisierte Tests in meinen Projekten</span></li>
         <li><strong>B2</strong><span lang="en">German, improving daily in Frankfurt</span><span lang="de">Deutsch, täglich besser in Frankfurt</span></li>
         <li><strong>10</strong><span lang="en">security learning paths completed (SOC, pentesting)</span><span lang="de">abgeschlossene Security-Lernpfade (SOC, Pentesting)</span></li>
       </ul>
@@ -421,6 +421,39 @@ DaemonSet/log-agent      <span class="bad">privileged</span></pre>
         </div>
       </article>
 
+      <article class="project featured">
+        <div class="project-visual code-visual" aria-hidden="true">
+          <div class="term-bar"><i></i><i></i><i></i><span>dotnet build</span></div>
+<pre>OrderRepository.cs(49,39): <span class="bad">warning SL001</span>
+  SQL injection: parameter 'model' of
+  CheckoutController.Checkout flows into
+  DbCommand.CommandText
+  <span class="dim">call path: CheckoutController.Checkout
+           → OrderRepository.CreateOrder</span>
+
+Views/Blog/Index.cshtml(22): <span class="bad">warning SL012</span>
+Fixed/ProductsController.cs  <span class="ok">no findings</span></pre>
+        </div>
+        <div class="project-body">
+          <p class="project-kicker">Roslyn · C# · SAST · ASP.NET Core</p>
+          <h3>Schlosser</h3>
+          <p>
+            <span lang="en">Security analyzers that run inside the C# compiler. They follow request data across methods, classes and
+              interfaces into SQL, shell commands, file paths, redirects and outgoing requests, and find weak cryptography,
+              hard-coded secrets and switched-off protections.</span>
+            <span lang="de">Sicherheits-Analyzer, die im C#-Compiler laufen. Sie verfolgen Daten aus dem HTTP-Request über Methoden, Klassen und
+              Interfaces hinweg bis in SQL, Shell-Befehle, Dateipfade, Redirects und ausgehende Aufrufe und finden schwache Kryptografie,
+              fest eingetragene Geheimnisse und abgeschaltete Schutzmechanismen.</span>
+          </p>
+          <ul class="highlights">
+            <li><span lang="en">31 rules with CWE ids, taint analysis with method summaries, code fixes for 9 rules (e.g. raw SQL → parameters)</span><span lang="de">31 Regeln mit CWE-Nummern, Taint-Analyse mit Methoden-Zusammenfassungen, Code-Fixes für 9 Regeln (z. B. rohes SQL → Parameter)</span></li>
+            <li><span lang="en">Checked in CI against OWASP WebGoat.NET at a pinned commit: finds its SQL injection through two classes</span><span lang="de">In der CI gegen OWASP WebGoat.NET geprüft (fester Commit): findet dessen SQL-Injection über zwei Klassen hinweg</span></li>
+            <li><span lang="en">Run over my 15 other repositories: false positives fixed, 7 deliberate findings left; 82 tests</span><span lang="de">Über meine 15 anderen Repositories gelaufen: Fehlalarme behoben, 7 bewusste Befunde übrig; 82 Tests</span></li>
+          </ul>
+          <a class="link" href="https://github.com/karicamar/schlosser" rel="noopener noreferrer"><span lang="en">Code &amp; docs</span><span lang="de">Code &amp; Doku</span> ↗</a>
+        </div>
+      </article>
+
       <div class="project-grid">
         <article class="project small">
           <p class="project-kicker">C# · .NET · EF Core · Flutter · Docker</p>
@@ -514,7 +547,7 @@ DaemonSet/log-agent      <span class="bad">privileged</span></pre>
         </div>
         <div class="skill-group">
           <h3>DevOps &amp; Tools</h3>
-          <ul class="tags"><li>Git</li><li>Docker</li><li>Kubernetes</li><li>GitHub Actions</li><li>CodeQL / SARIF</li><li>Terraform (azurerm)</li><li>RabbitMQ</li><li>Firebase</li></ul>
+          <ul class="tags"><li>Git</li><li>Docker</li><li>Kubernetes</li><li>GitHub Actions</li><li>CodeQL / SARIF</li><li>Roslyn analyzers</li><li>Terraform (azurerm)</li><li>RabbitMQ</li><li>Firebase</li></ul>
         </div>
         <div class="skill-group">
           <h3>Frontend &amp; Mobile</h3>
